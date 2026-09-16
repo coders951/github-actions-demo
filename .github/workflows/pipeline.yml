@@ -1,17 +1,22 @@
-name: My First Github Pipeline
+name: Python Calculator Program
 
 on:
-  push: 
-    branches: 
-       - main
+  workflow_dispatch:
 
 jobs:
-  hello:
+  test:
     runs-on: ubuntu-latest 
 
     steps:
       - name: checkout code 
         uses: actions/checkout@v4
 
-      - name: Say Hello
-        run: cat app.txt
+      - name: set up python
+        uses: actions/setup-python@v5
+        with: 
+          python-version: "3.14"
+     
+     - name: running calculator app
+       run: python calculator.py
+ 
+      
