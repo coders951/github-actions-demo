@@ -16,7 +16,7 @@ jobs:
         with: 
           python-version: "3.14"
      
-     - name: running calculator app
-       run: python calculator.py
+      - name: running calculator app
+        run: python calculator.py
  
       
